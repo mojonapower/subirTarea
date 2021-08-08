@@ -1,13 +1,20 @@
 import React from "react";
-
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
-
 //create your first component
-const Home = () => {
+
+export function CajaDarks() {
+	return <div className="dark mx-5">Hola soy muy darks</div>;
+}
+
+export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<h1>Hello Rigo!</h1>
+			<div className="row">
+				<CajaDarks></CajaDarks>
+			</div>
+
 			<p>
 				<img src={rigoImage} />
 			</p>
@@ -22,5 +29,3 @@ const Home = () => {
 		</div>
 	);
 };
-
-export default Home;
